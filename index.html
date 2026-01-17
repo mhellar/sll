@@ -33,42 +33,164 @@
 
             <section data-background-color="#000">
                 <h1>Signal, Logic, and Light</h1>
-                <div class="placeholder-img"></div>
+                <div>                         <video height="50%"
+        data-autoplay 
+        src="/heart.mp4" 
+        loop 
+        muted 
+        playsinline
+        style="width: 80%; border-radius: 8px; border: 1px solid #333;"></div>
                 <p><small>Instructor: <strong>Mark Hellar</strong> (Hellar Studios LLC)<br>Location: TIAT (151 Powell St)</small></p>
             </section>
 
             <section>
                 <h1>Introductions!</h1>
+                         <video height="50%"
+        data-autoplay 
+        src="/2233.mp4" 
+        loop 
+        muted 
+        playsinline
+        style="width: 20%; border-radius: 8px; border: 1px solid #333;">
             </section>
+
+
+
             <section>
                 <h2 style="color: var(--accent-color);">Class Overview</h2>
                 <div style="display: flex; gap: 20px; margin-top: 40px;">
                     <div style="flex: 1; text-align: left; font-size: 0.75em; border-right: 1px solid #333; padding-right: 20px;">
                         <h4 style="color: #fff;">1. Hardware Foundation</h4>
                         <ul>
-                            <li><strong>Lineage:</strong> Pre-addressable to modern "Smart Pixels."</li>
-                            <li><strong>The Build:</strong> Power, ground, and voltage.</li>
+                            <li><strong>History:</strong> Pre-addressable to modern "Smart Pixels."</li>
                             <li><strong>Assembly:</strong> Soldering and enclosures.</li>
                         </ul>
                     </div>
                     <div style="flex: 1; text-align: left; font-size: 0.75em; border-right: 1px solid #333; padding-right: 20px; padding-left: 10px;">
                         <h4 style="color: #fff;">2. Controlling Light</h4>
                         <ul>
-                            <li><strong>Instructions:</strong> One-wire data protocols.</li>
-                            <li><strong>Patterns via Math:</strong> Using waves for movement.</li>
-                            <li><strong>The Library:</strong> FastLED vs. Adafruit.</li>
+                            <li><strong>Coding</strong>Use the Arduino IDE</li>
+                            <li><strong>Patterns from scratch:</strong>Fun with Arduino C++</li>
+                            <li><strong>The Libraries:</strong> FastLED Adafruit and friends!</li>
                         </ul>
                     </div>
                     <div style="flex: 1; text-align: left; font-size: 0.75em; padding-left: 10px;">
                         <h4 style="color: #fff;">3. Scaling Up</h4>
                         <ul>
                             <li><strong>Networking:</strong> TouchDesigner</li>
-                            <li><strong>Protocols:</strong> Wireless control via E1.31.</li>
-                            <li><strong>Demo:</strong> 2,000 LED systems.</li>
+                            <li><strong>Protocols:</strong> The DMX Lighting protocal and Wireless control via E1.31.</li>
+                            <li><strong>Demo:</strong> 2,000 LED system.</li>
                         </ul>
                     </div>
                 </div>
             </section>
+
+            <section data-background-color="#001a14">
+    <h2 style="color: var(--accent-color);">The Studio Spirit</h2>
+    <p>Code can be hard and hardware can messy. Let's embrace it.</p>
+    
+    <div style="display: flex; gap: 30px; margin-top: 40px; text-align: left;">
+        <div style="flex: 1; border-left: 4px solid var(--accent-color); padding-left: 20px;">
+            <h4 style="color: #fff;">Build Together</h4>
+            <p style="font-size: 0.8em; line-height: 1.6;">
+                If you get your LEDs working, help the person next to you. The best way to master a signal path is to troubleshoot someone else's.
+            </p>
+        </div>
+
+        <div style="flex: 1; border-left: 4px solid #ff00ff; padding-left: 20px;">
+            <h4 style="color: #fff;">Safe to Fail</h4>
+            <p style="font-size: 0.8em; line-height: 1.6;">
+                Flickering lights and "magic smoke" are part of the process. We are here to experiment, break things, and find the logic in the noise.
+            </p>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px;">
+        <h3 style="color: #fff;">Make something cool. Make a new friend.</h3>
+        <p style="font-size: 1.2em;">I'm glad you all are here!!</strong></p>
+    </div>
+</section>
+
+            <section>
+    <h2 style="color: var(--accent-color);">Software Check-in</h2>
+    <p>Let's make sure the baseline tools are ready to go.</p>
+    
+    <div style="display: flex; gap: 30px; margin-top: 30px; text-align: left;">
+        <div style="flex: 1; border: 1px solid #333; padding: 20px; border-radius: 10px;">
+            <h4 style="color: #fff;">1. Arduino IDE + ESP32</h4>
+            <ul style="font-size: 0.7em;">
+                <li><strong>Core:</strong> Check <em>Tools > Board > Boards Manager</em>. Search for "ESP32" by Espressif.</li>
+                <li><strong>Selection:</strong> Can you see <strong>"ESP32-C3 Dev Module"</strong> in your boards list?</li>
+                <li><strong>Libraries:</strong> Have you installed <strong>FastLED</strong> or <strong>Adafruit NeoPixel</strong> from the Library Manager?</li>
+            </ul>
+        </div>
+
+        <div style="flex: 1; border: 1px solid #333; padding: 20px; border-radius: 10px;">
+            <h4 style="color: #fff;">2. TouchDesigner</h4>
+            <ul style="font-size: 0.7em;">
+                <li><strong>Version:</strong> Latest Stable Build installed.</li>
+                <li><strong>License:</strong> Non-Commercial (Free) is perfectly fine for today.</li>
+                <li><strong>The Test:</strong> Can you open a blank project and place a <strong>DMX Out CHOP</strong>?</li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <div class="tech-note" style="margin-top: 30px;">
+        <strong>Stuck?</strong> If you don't see the ESP32 boards or TD is hanging on the splash screen, let's sort it out now before we move into the hardware wiring.
+    </div>
+</section>
+
+
+                        <section>
+    <h2 style="color: var(--accent-color);">What is an LED?</h2>
+   <img src="/led.jpg" height="250">
+    
+    <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
+        <div style="flex: 1; text-align: left; font-size: 0.8em;">
+            <h4 style="color: #fff;">The Semiconductor Physics</h4>
+            <ul>
+                <li><strong>The Diode:</strong> A one-way valve for electricity. Current flows from the Anode (+) to the Cathode (-).</li>
+                <li><strong>The Photon:</strong> When electrons drop into "holes" in the semiconductor material, they release energy as light.</li>
+                <li><strong>The Color:</strong> Defined by the material of the chip (Gallium, Arsenic, etc.), not a colored filter or bulb.</li>
+            </ul>
+        </div>
+        <div style="flex: 1;">
+            
+        </div>
+    </div>
+</section>
+            <section data-background-color="#050505">
+                <span class="history-tag">The Master</span>
+                <h3>Jim Campbell</h3>
+                <p>The Greatest of All Time!</p>
+                <div class="placeholder-img"><img src="/jim_campbell_hero_option-card.jpg"></div>
+            </section>
+
+            <section>
+                <span class="history-tag">Pre-2000s History</span>
+                <h3>The Discrete Era</h3>
+                <div class="tech-note">
+                    <strong>Before the early 2000s:</strong> "Addressable LEDs" did not exist. Campbell built custom PCBs and complex multiplexing circuits to address every discrete LED.
+                </div>
+                <ul>
+                    <li>No WS2812B chips.</li>
+                    <li>Custom electrical engineering for every pixel.</li>
+                    <li>Respect the engineering: We are standing on his shoulders.</li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h3>The Wiring Constraint</h3>
+                <p style="font-size: 0.8em;">Standard LEDs require discrete wiring for every channel.</p>
+                <img src="led.png" height="300">
+                <p><small>Scaling this to 2,000 pixels is a physical impossibility for installation work.</small></p>
+            </section>
+            <section>
+   <img src="/hq720.jpg" height="250">
+</section>
             <section>
                 <h2 style="color: var(--accent-color);">Evolution of the LED</h2>
                 <div style="display: flex; justify-content: center; gap: 10px; align-items: center;">
@@ -77,15 +199,8 @@
                     <img src="ws2811.png" height="150">
                 </div>
                 <div class="tech-note">
-                    <strong>The Commodity Era:</strong> Around the early 2000s, control logic moved from the external circuit directly into the LED housing.
+                     Around the early 2000s, control logic moved from the external circuit directly into the LED housing.
                 </div>
-            </section>
-
-            <section>
-                <h3>The Wiring Constraint</h3>
-                <p style="font-size: 0.8em;">Standard LEDs require discrete wiring for every channel.</p>
-                <img src="led.png" height="300">
-                <p><small>Scaling this to 2,000 pixels is a physical impossibility for installation work.</small></p>
             </section>
 
             <section>
@@ -107,7 +222,7 @@
             </section>
 
             <section>
-                <h3>Deployment at Scale</h3>
+                <h3>Very Scalable!</h3>
                 <img src="wall.jpg" height="300">
                 <p style="font-size: 0.8em;">Chainable, integrated resistors, and low per-unit cost.</p>
                 <div class="tech-note" style="border-left-color: #ff00ff;">
@@ -115,22 +230,78 @@
                 </div>
             </section>
 
-            <section>
-                <h3>NeoPixel vs. WS2812B</h3>
-                <div style="display: flex; align-items: center; gap: 20px;">
-                    <div style="flex: 1;">
-                        <img src="ada.png">
-                        <p><small><strong>NeoPixel:</strong> Adafruit's high-quality brand/library support.</small></p>
-                    </div>
-                    <div style="flex: 1;">
-                        <img src="ebay.png">
-                        <p><small><strong>Generic:</strong> Sourcing direct from Shenzhen/distributors is cost-effective for large installations.</small></p>
-                    </div>
-                </div>
-            </section>
+<section>
+    <h2 style="color: var(--accent-color);">The Microcontroller: ESP32-C3</h2>
+    <p>RISC-V Microcontroller with Integrated Radio</p>
+    
+    <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
+        <div style="flex: 1; text-align: left; font-size: 0.8em;">
+            <h4 style="color: #fff;">Architecture over Marketing</h4>
+            <ul>
+                <li><strong>Clock Speed:</strong> 160 MHz. Fast enough to handle 800kHz refresh cyscle without flickering.</li>
+                <li><strong>Memory:</strong> 400KB RAM. Essential for large pixel buffers (24-bits per LED).</li>
+                <li><strong>Connectivity:</strong> 2.4 GHz Wi-Fi. Turns a bench prototype into an <strong> Network controlled DMX lighting fixture</strong>.</li>
+                <li><strong>Afforable:</strong>Currently 4 dollars on Amazon</strong>.</li>
+            </ul>
+        </div>
+        <div style="flex: 1;">
+            <div class="placeholder-img" style="height: 250px;"></div>
+        </div>
+    </div>
+
+</section>
+
+<section>
+<h3>How To Solder</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f95i88OSWB4?si=mxgYsmXfc-LNke97" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+    
+<section>
+    <h2 style="color: var(--accent-color);">The Arduino IDE</h2>
+    <p>The bridge between your ideas and the hardware.</p>
+    
+    <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
+        <div style="flex: 1; text-align: left; font-size: 0.8em;">
+            <h4 style="color: #fff;">The Workflow</h4>
+            <ul>
+                <li><strong>Write:</strong> You write instructions in C++ (a language the chip understands).</li>
+                <li><strong>Compile:</strong> The IDE translates your text into binary "machine code."</li>
+                <li><strong>Upload:</strong> The compiled code is pushed over USB-C to the ESP32's memory.</li>
+            </ul>
+        </div>
+        <div style="flex: 1;">
+            
+        </div>
+    </div>
+
+    <div class="tech-note" style="margin-top: 20px;">
+        <strong>The Loop:</strong> Unlike a standard computer program that runs once and stops, Arduino code runs a <code>setup()</code> once, then runs a <code>loop()</code> thousands of times a second forever.
+    </div>
+</section>
+
+<section>
+    <h2 style="color: var(--accent-color);">The Heavy Lifting</h2>
+    <p>What’s actually happening under the hood?</p>
+    
+    <div style="padding: 40px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; margin-top: 30px;">
+        <p style="font-size: 1.2em; line-height: 1.6; text-align: left;">
+            Under the hood, the microcontroller has to manually flip a tiny switch on and off at an incredible speed to <strong>"hand-crank"</strong> a unique electrical message for every single light. 
+        </p>
+        <p style="font-size: 1.2em; line-height: 1.6; text-align: left; margin-top: 20px;">
+            It’s a nanosecond-perfect dance of pulses that has to happen millions of times a second just to change a color.
+        </p>
+    </div>
+
+    <div style="margin-top: 40px; color: var(--accent-color); font-weight: bold; font-size: 1.5em;">
+        ↓
+    </div>
+    
+    <p><strong>But we get to use libraries to make it easier.</strong></p>
+</section>
 
             <section>
-                <h3>Library Abstraction</h3>
+                <h3>Libraries</h3>
                 <div style="display: flex; justify-content: center; gap: 20px;">
                     <img src="import_library.png" height="200">
                     <img src="neolib.png" height="200">
@@ -138,26 +309,113 @@
                 <p>We use libraries to handle the 800kHz timing requirements of the WS2812B protocol, allowing us to focus on generative logic.</p>
             </section>
 
-            <section>
-                <h3>High-Performance Alternatives</h3>
-                <div style="display: flex; gap: 30px; justify-content: center; align-items: flex-start; margin-top: 20px;">
-                    <div style="flex: 1; border: 1px solid #333; padding: 20px;">
-                        <h4>FastLED</h4>
-                        <p style="font-size: 0.7em;">Optimized 8-bit math for high-frame-rate installations.</p>
-                        <a href="http://fastled.io/" style="font-size: 0.6em; color: var(--accent-color);">fastled.io</a>
-                    </div>
-                    <div style="flex: 1; border: 1px solid #333; padding: 20px;">
-                        <h4>APA102</h4>
-                        <p style="font-size: 0.7em;">The "Superled." Uses a separate clock pin for much higher stability and speed.</p>
-                        <a href="https://cpldcpu.wordpress.com/2014/08/27/apa102/" style="font-size: 0.6em; color: var(--accent-color);">APA102 Protocol Analysis</a>
-                    </div>
-                </div>
-            </section>
+<section>
+    <h3>Library: Adafruit NeoPixel</h3>
+    <p>The standard "entry-level" library. Simple, but effective.</p>
+    <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
+        <div style="flex: 1; text-align: left; font-size: 0.7em;">
+            <pre><code class="language-cpp" data-trim>
+#include <Adafruit_NeoPixel.h>
 
-            <section data-background-color="#00ffcc">
-                <h2 style="color: #000;">Coding Session</h2>
-                <p style="color: #000;">Let's move from theory to the IDE.</p>
-            </section>
+// Define Pin and Count
+Adafruit_NeoPixel strip(64, 6, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  strip.begin();
+}
+
+void loop() {
+  // Set pixel 0 to Red
+  strip.setPixelColor(0, 255, 0, 0); 
+  strip.show();
+}
+            </code></pre>
+        </div>
+        <div style="flex: 1; font-size: 0.75em; text-align: left;">
+            <h4 style="color: #fff;">Key Concepts:</h4>
+            <ul>
+                <li><strong>strip.begin():</strong> Initializes the data pin.</li>
+                <li><strong>setPixelColor(n, r, g, b):</strong> Loads the data into a "buffer" (waiting area).</li>
+                <li><strong>strip.show():</strong> Sends the buffer to the lights.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Library: Adafruit NeoMatrix</h3>
+    <p>Mapping a 1D strip into a 2D coordinate system.</p>
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1; text-align: left; font-size: 0.7em;">
+            <pre><code class="language-cpp" data-trim>
+// Setup for an 8x8 grid on Pin 6
+Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(8, 8, 6,
+  NEO_MATRIX_TOP + NEO_MATRIX_LEFT +
+  NEO_MATRIX_ROWS + NEO_MATRIX_PROGRESSIVE);
+
+void loop() {
+  // Draw a single pixel at X:3, Y:4
+  matrix.drawPixel(3, 4, matrix.Color(0, 255, 0));
+  matrix.show();
+}
+            </code></pre>
+        </div>
+        <div style="flex: 1; font-size: 0.75em; text-align: left;">
+            <h4 style="color: #fff;">Why use a Matrix library?</h4>
+            <ul>
+                <li><strong>X/Y Coordinates:</strong> No more calculating if pixel "27" is where you think it is.</li>
+                <li><strong>Layouts:</strong> Handles "Zig-Zag" wiring automatically.</li>
+                <li><strong>Text:</strong> Includes built-in functions for scrolling characters.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Library: FastLED</h3>
+    <p>Optimized for high frame rates and creative color control.</p>
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1; text-align: left; font-size: 0.7em;">
+            <pre><code class="language-cpp" data-trim>
+#include <FastLED.h>
+CRGB leds[64];
+
+void setup() {
+  FastLED.addLeds<WS2812B, 6, GRB>(leds, 64);
+}
+
+void loop() {
+  // Use HSV for easy color fades
+  // Hue, Saturation, Value (Brightness)
+  leds[0] = CHSV(160, 255, 255); 
+  FastLED.show();
+}
+            </code></pre>
+        </div>
+        <div style="flex: 1; font-size: 0.75em; text-align: left;">
+            <h4 style="color: #fff;">FastLED Advantages:</h4>
+            <ul>
+                <li><strong>HSV Color:</strong> Change colors by "Hue" (0-255) instead of mixing RGB.</li>
+                <li><strong>Math Helpers:</strong> Built-in 8-bit Sine waves and Noise functions.</li>
+                <li><strong>Power Management:</strong> Can limit current to prevent blowing fuses.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h3>Library: NeoPixelBus</h3>
+    <p>The "Hard-Wired" choice for ESP32 stability.</p>
+    <div class="tech-note">
+        Most libraries "bit-bang" (the CPU manually toggles the pin). <strong>NeoPixelBus</strong> uses the ESP32’s internal hardware (RMT/I2S) to send data in the background.
+    </div>
+    <ul style="font-size: 0.8em; text-align: left; margin-top: 20px;">
+        <li><strong>Rock Solid:</strong> Zero flickering, even when the ESP32 is busy with Wi-Fi.</li>
+        <li><strong>DMA Support:</strong> Frees up the "Brain" to do math while the "Hands" send the light data.</li>
+        <li><strong>The Trade-off:</strong> Slightly more complex to set up, but essential for professional installations.</li>
+    </ul>
+</section>
+            
             <section>
     <h2 style="color: var(--accent-color);">Led Mecca: Shenzhen</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
@@ -183,133 +441,85 @@
     </div>
 </section>
 
-
-
-            <section data-background-color="#050505">
-                <span class="history-tag">The Master</span>
-                <h3>Jim Campbell</h3>
-                <p>The Master of the Low-Resolution Signal</p>
-                <div class="placeholder-img"></div>
-                <div class="tech-note">
-                    His work proves that <strong>logic</strong> defines the image. In his SFMOMA pieces, the brain "renders" the movement, not the hardware.
-                </div>
-            </section>
-
-            <section>
-                <span class="history-tag">Pre-2000s History</span>
-                <h3>The Discrete Era</h3>
-                <div class="tech-note">
-                    <strong>Before the early 2000s:</strong> "Addressable LEDs" did not exist. Campbell built custom PCBs and complex multiplexing circuits to address every discrete LED.
-                </div>
-                <ul>
-                    <li>No WS2812B chips.</li>
-                    <li>Custom electrical engineering for every pixel.</li>
-                    <li>Respect the engineering: We are standing on his shoulders.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>The Bitstream Under the Hood</h3>
-                <div class="placeholder-img"></div>
-                <p>Timing sensitivity: 800kHz (T0H vs T1H).</p>
-                <div class="tech-note">
-                    Libraries like FastLED/Adafruit handle the nanosecond toggling so we don't have to write assembly code.
-                </div>
-            </section>
-
-            <section>
-                <h3>The Build: Hardware Foundation</h3>
-                <div style="display: flex; align-items: center;">
-                    <div style="flex: 1; text-align: left; font-size: 0.8em;">
-                        <ul>
-                            <li><strong>MCU:</strong> ESP32-C3 (3.3V Logic)</li>
-                            <li><strong>Level Shifting:</strong> Bridging the voltage gap.</li>
-                            <li><strong>Power:</strong> Amperage limits and shared grounds.</li>
-                        </ul>
-                    </div>
-                    <div style="flex: 1;">
-                        <div class="placeholder-img" style="width: 300px;"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2>Module 2: The Logic Layer</h2>
-                <h3>Creative Coding & Pixel Buffers</h3>
-                <p>How the MCU stores 64 pixels as a 24-bit color array in RAM.</p>
-            </section>
-
-            <section>
-                <h3>Adafruit NeoPixel Logic</h3>
-                <pre><code class="language-cpp" data-trim data-line-numbers>
-float intensity = (sin(millis() * 0.005) + 1) * 127;
-strip.setPixelColor(i, strip.Color(0, intensity, 255));
-                </code></pre>
-                <p><small>Simple, effective, and uses floating point math.</small></p>
-            </section>
-
-            <section>
-                <h3>FastLED: The Pro Choice</h3>
-                <p>8-bit math for speed (<code>beat8</code>, <code>sin8</code>).</p>
-                <pre><code class="language-cpp" data-trim data-line-numbers>
-uint8_t hue = beat8(15); 
-leds[i] = CHSV(hue + (i * 4), 255, 255);
-                </code></pre>
-            </section>
-
-            <section data-background-color="#000d1a">
+<section data-background-color="#000d1a">
                 <h2 style="color: var(--accent-color);">Module 3: The Expanded Field</h2>
-                <p>From Local Logic to Networked Systems</p>
-            </section>
-
-            <section>
-                <h3>TouchDesigner: The Signal Playground</h3>
-                <div style="display: flex; gap: 20px; align-items: center;">
-                    <div style="flex: 1; text-align: left; font-size: 0.75em;">
-                        <p>Treating the LED matrix as a <strong>Render Texture</strong>.</p>
-                        <ul>
-                            <li><strong>TOPs to CHOPs:</strong> Converting visuals into DMX data.</li>
-                            <li><strong>Live Control:</strong> Manipulation of generative shaders.</li>
-                            <li><strong>Output:</strong> Streaming E1.31 (sACN) to our nodes.</li>
-                        </ul>
-                    </div>
-                    <div style="flex: 1;">
-                        <div class="placeholder-img" style="height: 250px;"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h3>Professional Control Logic</h3>
-                <div style="display: flex; gap: 20px; font-size: 0.7em; text-align: left;">
-                    <div style="flex: 1; border-left: 3px solid var(--accent-color); padding-left: 15px;">
-                        <h4 style="color: #fff;">QLC+: Live Routing</h4>
-                        <p>Open Lighting Architecture for live fader control and MIDI integration.</p>
-                    </div>
-                    <div style="flex: 1; border-left: 3px solid #ff00ff; padding-left: 15px;">
-                        <h4 style="color: #fff;">xLights: Large Scale</h4>
-                        <p>The standard for architectural sequencing across 3D space.</p>
-                    </div>
+                <p>From Local Binaries to Networked Systems</p>
+                <div class="tech-note">
+                    Moving beyond a single microcontroller to distributed systems that talk over the wire.
                 </div>
             </section>
 
             <section data-background-color="#000">
                 <h3>Local Case Study: <em>Lucy in the Sky</em></h3>
-                <p style="font-size: 0.8em;">Erwin Redl | Union Square Station</p>
+                <p style="font-size: 0.8em;">Erwin Redl | Union Square Subway Station</p>
                 <div class="placeholder-img" style="height: 250px;"></div>
-                <div class="tech-note" style="border-left-color: #ff00ff;">
-                    <strong>Mark's Repair Log:</strong> 500ft installation running on DMX. The repair involves tracing the same differential signals we are simulating wirelessly.
-                </div>
+                <ul style="font-size: 0.7em; margin-top: 10px;">
+                    <li><strong>Scale:</strong> Hundreds of unique translucent light panels.</li>
+                    <li><strong>Protocol:</strong> Uses DMX to orchestrate a massive, cohesive environmental canvas.</li>
+                    <li><strong>Concept:</strong> Turning a transit hub into a low-resolution display.</li>
+                </ul>
             </section>
 
             <section>
-                <h3>Demo: Scaling to 2,000 LEDs</h3>
+                <h3>WLED: The Swiss Army Knife</h3>
                 <div style="display: flex; gap: 20px; align-items: center;">
                     <div style="flex: 1; text-align: left; font-size: 0.75em;">
+                        <p>A high-performance web server for ESP32 that handles the "heavy lifting" of LED control for you.</p>
                         <ul>
-                            <li><strong>Parallel Output:</strong> 8 ESP32 pins for high refresh rates.</li>
-                            <li><strong>Power Injection:</strong> Managing the amperage of 2,000 pixels.</li>
-                            <li><strong>Signal Integrity:</strong> Level shifters for the first pixel.</li>
+                            <li><strong>Instant UI:</strong> Control your 8x8 matrix from any web browser or phone.</li>
+                            <li><strong>Open Source:</strong> 100+ built-in effects and color palettes.</li>
+                            <li><strong>Integration:</strong> Acts as a "bridge"—it listens for DMX/E1.31 data and pushes it to the pixels.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="placeholder-img" style="height: 250px;"></div>
+                    </div>
+                </div>
+            </section>
+<section>
+    <h2 style="color: var(--accent-color);">The DMX Protocol</h2>
+    <p>Direct technical breakdown of the signal hierarchy.</p>
+    
+    <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 30px;">
+        <div style="flex: 1; text-align: left; font-size: 0.75em;">
+            <h4 style="color: #fff;">1. The Channel</h4>
+            <ul>
+                <li>The smallest unit of data (8-bit).</li>
+                <li>Value range: <strong>0 to 255</strong>.</li>
+                <li>Controls one parameter (e.g., Red intensity).</li>
+            </ul>
+
+            <h4 style="color: #fff; margin-top: 15px;">2. The Universe</h4>
+            <ul>
+                <li>A complete set of <strong>512 Channels</strong>.</li>
+                <li>Sent as a continuous loop (refreshing ~44 times a second).</li>
+                <li>Our 8x8 matrix uses <strong>192 channels</strong> per universe (64 pixels × 3).</li>
+            </ul>
+
+            <h4 style="color: #fff; margin-top: 15px;">3. The Address</h4>
+            <ul>
+                <li>The starting point for a physical device.</li>
+                <li>An RGB fixture addressed at <strong>1</strong> consumes 1, 2, and 3.</li>
+                <li>The next fixture must start at <strong>4</strong> to avoid overlap.</li>
+            </ul>
+        </div>
+        <div style="flex: 1;">
+            
+            <div class="tech-note" style="margin-top: 20px; font-size: 0.65em;">
+                <strong>Hardware Reality:</strong> The ESP32 listens to the entire 512-channel stream and only "picks out" the channels assigned to its address.
+            </div>
+        </div>
+    </div>
+</section>
+            <section>
+                <h3>Network Protocols: DMX, E1.31, & Art-Net</h3>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div style="flex: 1; text-align: left; font-size: 0.75em;">
+                        <p>How we send "Light Data" over a standard network.</p>
+                        <ul>
+                            <li><strong>DMX512:</strong> The industry standard. 512 channels of data (0-255).</li>
+                            <li><strong>Art-Net / E1.31:</strong> "DMX over Ethernet." This lets us send thousands of universes over standard Wi-Fi or Cat6 cables.</li>
+                            <li><strong>The Benefit:</strong> One laptop can now control an entire building’s worth of LEDs.</li>
                         </ul>
                     </div>
                     <div style="flex: 1;">
@@ -319,66 +529,37 @@ leds[i] = CHSV(hue + (i * 4), 255, 255);
             </section>
 
             <section>
-                <h2>Module 4: The Studio Jam</h2>
-                <ul>
-                    <li>TouchDesigner TOP-to-CHOP workflows.</li>
-                    <li>WLED Networking & E1.31 Setup.</li>
-                    <li>Common Failures: Ground loops and Universe mismatches.</li>
-                </ul>
+                <h3>QLC+ Demo: Lighting Desk Logic</h3>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div style="flex: 1; text-align: left; font-size: 0.75em;">
+                        <p>Professional-grade lighting control software that’s completely free.</p>
+                        <ul>
+                            <li><strong>Virtual Console:</strong> Create faders and buttons to trigger your 8x8 patterns.</li>
+                            <li><strong>Function Manager:</strong> Build "scenes" and "chases" just like a stage lighting pro.</li>
+                            <li><strong>Assignment:</strong> Routing specific software channels to our physical ESP32 IP addresses.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="placeholder-img" style="height: 250px;"></div>
+                    </div>
+                </div>
             </section>
 
-            <section data-background-color="#00ffcc">
-                <h2 style="color: #000;">Ready to Jam 🤘</h2>
-                <p style="color: #000;">Let's move some bits.</p>
-                <p style="color: #444;"><small>Hellar Studios LLC | TIAT San Francisco</small></p>
-            </section>
-
-            <section data-background-color="#000" data-background-transition="slow">
-                <h2 style="color: var(--accent-color);">Live Demo: Signal Analysis</h2>
-                <div class="placeholder-img"></div>
-                <div class="tech-note">Observing the timing of a single bit.</div>
-            </section>
-
-            <section data-background-color="#050505">
-                <h2 style="color: #fff;">Logic Check</h2>
-                <p>Are we seeing flickering? Check the Common Ground.</p>
-                <div class="placeholder-img"></div>
-            </section>
-
-            <section data-background-color="#001a14" data-background-transition="zoom">
-                <h2 style="color: var(--accent-color);">E1.31 Routing</h2>
-                <p>Ensuring the TouchDesigner Universe matches WLED.</p>
-                <div class="placeholder-img"></div>
-            </section>
-
-            <section data-background-color="#000">
-                <h2 style="color: #fff;">The Repair Log</h2>
-                <p>Discussing the Erwin Redl DMX trace.</p>
-                <div class="placeholder-img"></div>
-            </section>
-
-            <section data-background-color="#1a001a">
-                <h2 style="color: #ff00ff;">Parallel Output Test</h2>
-                <p>Testing 8-pin distribution at 60Hz.</p>
-                <div class="placeholder-img"></div>
-            </section>
-
-            <section data-background-color="#000">
-                <h2 style="color: #fff;">Power Injection Map</h2>
-                <div class="placeholder-img"></div>
-                <p><small>Tracking voltage drop across 2,000 pixels.</small></p>
-            </section>
-
-            <section data-background-color="#001a14">
-                <h2 style="color: var(--accent-color);">Final Code Review</h2>
-                <p>Comparing FastLED 8-bit math vs. Standard C++.</p>
-                <div class="placeholder-img"></div>
-            </section>
-
-            <section data-background-color="#000">
-                <h2 style="color: var(--accent-color);">Open Jam 🤘</h2>
-                <p>Ask anything: Hardware, Conservation, or Shaders.</p>
-                <div class="placeholder-img"></div>
+            <section>
+                <h3>TouchDesigner: DMX Out</h3>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div style="flex: 1; text-align: left; font-size: 0.75em;">
+                        <p>Moving from "pre-made" effects to real-time generative data.</p>
+                        <ul>
+                            <li><strong>DMX Out CHOP:</strong> The node that packages your visual data into E1.31 packets.</li>
+                            <li><strong>Unicast vs. Multicast:</strong> Directing data specifically to your ESP32's IP.</li>
+                            <li><strong>Latency:</strong> Tuning the network for real-time, "frame-perfect" performance.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="placeholder-img" style="height: 250px;"></div>
+                    </div>
+                </div>
             </section>
 
         </div>
