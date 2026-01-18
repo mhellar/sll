@@ -230,22 +230,47 @@
                 </div>
             </section>
 
+                        <section>
+    <h2 style="color: var(--accent-color);">Led Mecca: Shenzhen</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
+         <img src="/20171012_123537.jpg">
+        </div>
+        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
+         <video 
+        data-autoplay 
+        src="/20171013_172348.mp4" 
+        loop 
+        muted 
+        playsinline
+        style="width: 80%; border-radius: 8px; border: 1px solid #333;">
+    </video>
+        </div>
+        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
+         <img src="/20171017_085741.jpg">
+        </div>
+        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
+        <img src="/20171014_113338.jpg">
+        </div>
+    </div>
+</section>
+
 <section>
     <h2 style="color: var(--accent-color);">The Microcontroller: ESP32-C3</h2>
     <p>RISC-V Microcontroller with Integrated Radio</p>
     
     <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
         <div style="flex: 1; text-align: left; font-size: 0.8em;">
-            <h4 style="color: #fff;">Architecture over Marketing</h4>
+            <h4 style="color: #fff;">Architecture</h4>
             <ul>
-                <li><strong>Clock Speed:</strong> 160 MHz. Fast enough to handle 800kHz refresh cyscle without flickering.</li>
+                <li><strong>Clock Speed:</strong> 160 MHz Clock Speed(single core)</li>
                 <li><strong>Memory:</strong> 400KB RAM. Essential for large pixel buffers (24-bits per LED).</li>
-                <li><strong>Connectivity:</strong> 2.4 GHz Wi-Fi. Turns a bench prototype into an <strong> Network controlled DMX lighting fixture</strong>.</li>
-                <li><strong>Afforable:</strong>Currently 4 dollars on Amazon</strong>.</li>
+                <li><strong>Connectivity:</strong> 2.4 GHz Wi-Fi. so we can make a <strong> Network controlled DMX lighting fixture</strong>.</li>
+                <li><strong>Affordable:</strong>Currently 4 dollars on Amazon</strong>.</li>
             </ul>
         </div>
         <div style="flex: 1;">
-            <div class="placeholder-img" style="height: 250px;"></div>
+            <div class="placeholder-img" style="height: 250px;"><img src="/esp32.webp"></div>
         </div>
     </div>
 
@@ -256,11 +281,45 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f95i88OSWB4?si=mxgYsmXfc-LNke97" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
 
-    
+
 <section>
-    <h2 style="color: var(--accent-color);">The Arduino IDE</h2>
-    <p>The bridge between your ideas and the hardware.</p>
-    
+    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <img src="/IMG_0875.jpg">
+    </div>
+</section>
+
+<section>
+    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <img src="/IMG_0895.jpg" height="300">
+    </div>
+                        <ul>
+                <li><strong>Red:</strong>5V.</li>
+                <li><strong>Black:</strong>GND</strong>.</li>
+                <li><strong>Green(data):</strong>Pin 4</strong>.</li>
+            </ul>
+</section>
+
+<section>
+    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <img src="/IMG_0900.jpg">
+    </div>
+                        <ul>
+                <li><strong>Red:</strong>5V.</li>
+                <li><strong>Black:</strong>GND</strong>.</li>
+                <li><strong>Green(data):</strong>DIN</strong>.</li>
+            </ul>
+</section>
+
+
+<section>
+    <h1 style="font-size: 1.8em; line-height: 1.4; color: var(--accent-color);">
+        Before plugging in, hold the BOOT button.<br> 
+        Let go after the USB is connected.
+    </h1>
+</section>
+
+<section>
+    <h2 style="color: var(--accent-color);">The Arduino IDE</h2>    
     <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
         <div style="flex: 1; text-align: left; font-size: 0.8em;">
             <h4 style="color: #fff;">The Workflow</h4>
@@ -303,143 +362,135 @@
             <section>
                 <h3>Libraries</h3>
                 <div style="display: flex; justify-content: center; gap: 20px;">
-                    <img src="import_library.png" height="200">
-                    <img src="neolib.png" height="200">
+                    <img src="/fastled-3-9-2-beta-release-2-for-4-0-0-prelease-of-ws2812-v0-nio2vf9mp6yd1.webp" height="200">
+                    <img src="/Screenshot 2026-01-17 154326.png" height="200">
                 </div>
                 <p>We use libraries to handle the 800kHz timing requirements of the WS2812B protocol, allowing us to focus on generative logic.</p>
             </section>
+<section>
+    <h2 style="color: var(--accent-color);">Installing the Toolkits</h2>
+    <p>We will use two core libraries for the ESP32-C3.</p>
+    
+    <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 30px;">
+        <div style="flex: 1.2; text-align: left; font-size: 0.75em;">
+            <h4 style="color: #fff;">The Process</h4>
+            <ol>
+                <li>Open Arduino IDE.</li>
+                <li>Go to <strong>Sketch > Include Library > Manage Libraries...</strong></li>
+                <li>Search and <strong>Install</strong> the following:</li>
+            </ol>
+            
+            <ul style="margin-top: 20px; list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 20px;">
+                    <strong style="color: var(--accent-color);">1. FastLED</strong><br>
+                    <span style="opacity: 0.8;">The industry standard for creative coding, color math, and easy animations.</span>
+                </li>
+                <li>
+                    <strong style="color: var(--accent-color);">2. NeoPixelBus</strong><br>
+                    <span style="opacity: 0.8;">The "Pro" choice for ESP32. It uses internal hardware (RMT) to ensure the lights never flicker.</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div style="flex: 0.8; text-align: center;">
+             <div class="tech-note" style="margin-top: 20px; font-size: 0.65em;">
+                <strong>Why only these?</strong> The ESP32-C3 requires very specific timing that these two libraries handle best through hardware-level control.
+            </div>
+        </div>
+    </div>
+</section>
 
 <section>
-    <h3>Library: Adafruit NeoPixel</h3>
-    <p>The standard "entry-level" library. Simple, but effective.</p>
+    <h3>NeoPixelBus</h3>
     <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-        <div style="flex: 1; text-align: left; font-size: 0.7em;">
+        <div style="flex: 1.2; text-align: left; font-size: 0.65em;">
             <pre><code class="language-cpp" data-trim>
-#include <Adafruit_NeoPixel.h>
+#include <NeoPixelBus.h>
 
-// Define Pin and Count
-Adafruit_NeoPixel strip(64, 6, NEO_GRB + NEO_KHZ800);
+const uint16_t PixelCount = 64; 
+const uint8_t PixelPin = 4; 
+
+// three element pixels, in different order and speeds
+NeoPixelBus<NeoGrbFeature, NeoWs2812xMethod> strip(PixelCount, PixelPin);
+//NeoPixelBus<NeoRgbFeature, Neo400KbpsMethod> strip(PixelCount, PixelPin);
 
 void setup() {
-  strip.begin();
+    strip.Begin();
+    strip.Show(); 
 }
 
 void loop() {
-  // Set pixel 0 to Red
-  strip.setPixelColor(0, 255, 0, 0); 
-  strip.show();
+    SINGLE PIXEL
+    RgbColor me(255, 127, 0);
+    strip.SetPixelColor(5, me);
+    strip.Show();
+    delay(500);
+
+    // int r = random(0, 255);
+    // int g = random(0, 255);
+    // int b = random(0, 255);
+    
+    // for(int i = 0; i < PixelCount; i++) {
+    //   r = random(0, 255);
+    //   g = random(0, 255);
+    //   b = random(0, 255);
+    //     RgbColor rand(r, g, b);
+    //     strip.SetPixelColor(i, rand);
+    // }
+    // strip.Show();
+    // delay(500);
 }
             </code></pre>
-        </div>
-        <div style="flex: 1; font-size: 0.75em; text-align: left;">
-            <h4 style="color: #fff;">Key Concepts:</h4>
-            <ul>
-                <li><strong>strip.begin():</strong> Initializes the data pin.</li>
-                <li><strong>setPixelColor(n, r, g, b):</strong> Loads the data into a "buffer" (waiting area).</li>
-                <li><strong>strip.show():</strong> Sends the buffer to the lights.</li>
-            </ul>
         </div>
     </div>
 </section>
 
 <section>
-    <h3>Library: Adafruit NeoMatrix</h3>
-    <p>Mapping a 1D strip into a 2D coordinate system.</p>
-    <div style="display: flex; gap: 20px; align-items: flex-start;">
-        <div style="flex: 1; text-align: left; font-size: 0.7em;">
-            <pre><code class="language-cpp" data-trim>
-// Setup for an 8x8 grid on Pin 6
-Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(8, 8, 6,
-  NEO_MATRIX_TOP + NEO_MATRIX_LEFT +
-  NEO_MATRIX_ROWS + NEO_MATRIX_PROGRESSIVE);
-
-void loop() {
-  // Draw a single pixel at X:3, Y:4
-  matrix.drawPixel(3, 4, matrix.Color(0, 255, 0));
-  matrix.show();
-}
-            </code></pre>
-        </div>
-        <div style="flex: 1; font-size: 0.75em; text-align: left;">
-            <h4 style="color: #fff;">Why use a Matrix library?</h4>
-            <ul>
-                <li><strong>X/Y Coordinates:</strong> No more calculating if pixel "27" is where you think it is.</li>
-                <li><strong>Layouts:</strong> Handles "Zig-Zag" wiring automatically.</li>
-                <li><strong>Text:</strong> Includes built-in functions for scrolling characters.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h3>Library: FastLED</h3>
-    <p>Optimized for high frame rates and creative color control.</p>
-    <div style="display: flex; gap: 20px; align-items: flex-start;">
-        <div style="flex: 1; text-align: left; font-size: 0.7em;">
+    <h3>FastLED: Creative Control</h3>
+    <p>Fast and flexible. Best for generative art and color fades.</p>
+    <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
+        <div style="flex: 1.2; text-align: left; font-size: 0.65em;">
             <pre><code class="language-cpp" data-trim>
 #include <FastLED.h>
-CRGB leds[64];
+
+#define NUM_LEDS 64
+#define DATA_PIN 4 
+CRGB leds[NUM_LEDS];
 
 void setup() {
-  FastLED.addLeds<WS2812B, 6, GRB>(leds, 64);
+  FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
+  FastLED.setBrightness(40); 
 }
 
 void loop() {
-  // Use HSV for easy color fades
-  // Hue, Saturation, Value (Brightness)
-  leds[0] = CHSV(160, 255, 255); 
+  // SINGLE PIXEL
+  leds[0] = CRGB::Red;
   FastLED.show();
+  delay(500);
+
+
+  // for(int i = 0; i < NUM_LEDS; i++) {
+  //   leds[i] = CRGB::Blue;
+  // }
+  // FastLED.show();
+  // delay(500);
+
 }
             </code></pre>
-        </div>
-        <div style="flex: 1; font-size: 0.75em; text-align: left;">
-            <h4 style="color: #fff;">FastLED Advantages:</h4>
-            <ul>
-                <li><strong>HSV Color:</strong> Change colors by "Hue" (0-255) instead of mixing RGB.</li>
-                <li><strong>Math Helpers:</strong> Built-in 8-bit Sine waves and Noise functions.</li>
-                <li><strong>Power Management:</strong> Can limit current to prevent blowing fuses.</li>
-            </ul>
         </div>
     </div>
 </section>
 
-<section>
-    <h3>Library: NeoPixelBus</h3>
-    <p>The "Hard-Wired" choice for ESP32 stability.</p>
-    <div class="tech-note">
-        Most libraries "bit-bang" (the CPU manually toggles the pin). <strong>NeoPixelBus</strong> uses the ESP32’s internal hardware (RMT/I2S) to send data in the background.
-    </div>
-    <ul style="font-size: 0.8em; text-align: left; margin-top: 20px;">
-        <li><strong>Rock Solid:</strong> Zero flickering, even when the ESP32 is busy with Wi-Fi.</li>
-        <li><strong>DMA Support:</strong> Frees up the "Brain" to do math while the "Hands" send the light data.</li>
-        <li><strong>The Trade-off:</strong> Slightly more complex to set up, but essential for professional installations.</li>
-    </ul>
-</section>
-            
-            <section>
-    <h2 style="color: var(--accent-color);">Led Mecca: Shenzhen</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
-         <img src="/20171012_123537.jpg">
-        </div>
-        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
-         <video 
-        data-autoplay 
-        src="/20171013_172348.mp4" 
-        loop 
-        muted 
-        playsinline
-        style="width: 80%; border-radius: 8px; border: 1px solid #333;">
-    </video>
-        </div>
-        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
-         <img src="/20171017_085741.jpg">
-        </div>
-        <div class="placeholder-img" style="width: 45%; height: 250px; margin: 0;">
-        <img src="/20171014_113338.jpg">
-        </div>
-    </div>
-</section>
+            <section data-background-color="#000">
+                <h3>Local Case Study: <em>Lucy in the Sky</em></h3>
+                <p style="font-size: 0.8em;">Erwin Redl | Union Square Subway Station</p>
+                <div class="placeholder-img" style="height: 250px;"><img src="T2014.6_Overview_1.jpg">  </div>
+                <ul style="font-size: 0.7em; margin-top: 10px;">
+                    <li><strong>Scale:</strong> Hundreds of custom edge-lit lasercut light panels.</li>
+                    <li><strong>Protocol:</strong> Uses DMX to orchestrate a massive orchestraed light show</li>
+                    <li><strong>Concept:</strong> Looking and thinking about a large scale lighting installation the public sphere</li>
+                </ul>
+            </section>
 
 <section data-background-color="#000d1a">
                 <h2 style="color: var(--accent-color);">Module 3: The Expanded Field</h2>
@@ -449,16 +500,7 @@ void loop() {
                 </div>
             </section>
 
-            <section data-background-color="#000">
-                <h3>Local Case Study: <em>Lucy in the Sky</em></h3>
-                <p style="font-size: 0.8em;">Erwin Redl | Union Square Subway Station</p>
-                <div class="placeholder-img" style="height: 250px;"></div>
-                <ul style="font-size: 0.7em; margin-top: 10px;">
-                    <li><strong>Scale:</strong> Hundreds of unique translucent light panels.</li>
-                    <li><strong>Protocol:</strong> Uses DMX to orchestrate a massive, cohesive environmental canvas.</li>
-                    <li><strong>Concept:</strong> Turning a transit hub into a low-resolution display.</li>
-                </ul>
-            </section>
+
 
             <section>
                 <h3>WLED: The Swiss Army Knife</h3>
@@ -472,7 +514,7 @@ void loop() {
                         </ul>
                     </div>
                     <div style="flex: 1;">
-                        <div class="placeholder-img" style="height: 250px;"></div>
+                        <div class="placeholder-img" style="height: 250px;"><img src="wled_logo_akemi-1024x320.png">  </div>
                     </div>
                 </div>
             </section>
@@ -523,13 +565,13 @@ void loop() {
                         </ul>
                     </div>
                     <div style="flex: 1;">
-                        <div class="placeholder-img" style="height: 250px;"></div>
+                        <div class="placeholder-img" style="height: 250px;"> <img src="DMX-lighting-control-scenario.jpg" </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h3>QLC+ Demo: Lighting Desk Logic</h3>
+                <h3>QLC+ Demo: Open Source Lighting Console</h3>
                 <div style="display: flex; gap: 20px; align-items: center;">
                     <div style="flex: 1; text-align: left; font-size: 0.75em;">
                         <p>Professional-grade lighting control software that’s completely free.</p>
@@ -540,7 +582,7 @@ void loop() {
                         </ul>
                     </div>
                     <div style="flex: 1;">
-                        <div class="placeholder-img" style="height: 250px;"></div>
+                        <div class="placeholder-img" style="height: 250px;"> <img src="maxresdefault.jpg"> </div>
                     </div>
                 </div>
             </section>
@@ -557,7 +599,10 @@ void loop() {
                         </ul>
                     </div>
                     <div style="flex: 1;">
-                        <div class="placeholder-img" style="height: 250px;"></div>
+                        <div class="placeholder-img" style="height: 250px;">
+
+                            <img src="dmx.png">
+                        </div>
                     </div>
                 </div>
             </section>
