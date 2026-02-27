@@ -91,18 +91,10 @@
                 <h2 style="color: var(--accent-color);">Class Overview</h2>
                 <div style="display: flex; gap: 20px; margin-top: 40px;">
                     <div style="flex: 1; text-align: left; font-size: 0.75em; border-right: 1px solid #333; padding-right: 20px;">
-                        <h4 style="color: #fff;">1. Hardware Foundation</h4>
+                        <h4 style="color: #fff;">1. Hardware</h4>
                         <ul>
                             <li><strong>History:</strong> Pre-addressable to modern "Smart Pixels."</li>
                             <li><strong>Assembly:</strong> Soldering and enclosures.</li>
-                        </ul>
-                    </div>
-                    <div style="flex: 1; text-align: left; font-size: 0.75em; border-right: 1px solid #333; padding-right: 20px; padding-left: 10px;">
-                        <h4 style="color: #fff;">2. Controlling Light</h4>
-                        <ul>
-                            <li><strong>Coding</strong>Use the Arduino IDE</li>
-                            <li><strong>Patterns from scratch:</strong>Fun with Arduino C++</li>
-                            <li><strong>The Libraries:</strong> FastLED Adafruit and friends!</li>
                         </ul>
                     </div>
                     <div style="flex: 1; text-align: left; font-size: 0.75em; padding-left: 10px;">
@@ -170,14 +162,6 @@
     <p>Let's make sure the baseline tools are ready to go.</p>
     
     <div style="display: flex; gap: 30px; margin-top: 30px; text-align: left;">
-        <div style="flex: 1; border: 1px solid #333; padding: 20px; border-radius: 10px;">
-            <h4 style="color: #fff;">1. Arduino IDE + ESP32</h4>
-            <ul style="font-size: 0.7em;">
-                <li><strong>Core:</strong> Check <em>Tools > Board > Boards Manager</em>. Search for "ESP32" by Espressif.</li>
-                <li><strong>Selection:</strong> Can you see <strong>"ESP32-C3 Dev Module"</strong> in your boards list?</li>
-                <li><strong>Libraries:</strong> Have you installed <strong>FastLED</strong> or <strong>Adafruit NeoPixel</strong> from the Library Manager?</li>
-            </ul>
-        </div>
 
         <div style="flex: 1; border: 1px solid #333; padding: 20px; border-radius: 10px;">
             <h4 style="color: #fff;">2. TouchDesigner</h4>
@@ -192,7 +176,7 @@
     
 
     <div class="tech-note" style="margin-top: 30px;">
-        <strong>Stuck?</strong> If you don't see the ESP32 boards or TD is hanging on the splash screen, let's sort it out now before we move into the hardware wiring.
+        <strong>Stuck?</strong> let's sort it out now before we move into the hardware wiring.
     </div>
 </section>
 
@@ -364,198 +348,6 @@
             </ul>
 </section>
 
-
-<section>
-    <h1 style="font-size: 1.8em; line-height: 1.4; color: var(--accent-color);">
-        Before plugging in, hold the BOOT button.<br> 
-        Let go after the USB is connected.
-    </h1>
-</section>
-
-<section>
-    <h2 style="color: var(--accent-color);">The Arduino IDE</h2>    
-    <div style="display: flex; gap: 20px; align-items: center; margin-top: 30px;">
-        <div style="flex: 1; text-align: left; font-size: 0.8em;">
-            <h4 style="color: #fff;">The Workflow</h4>
-            <ul>
-                <li><strong>Write:</strong> You write instructions in C++ (a language the chip understands).</li>
-                <li><strong>Compile:</strong> The IDE translates your text into binary "machine code."</li>
-                <li><strong>Upload:</strong> The compiled code is pushed over USB-C to the ESP32's memory.</li>
-            </ul>
-        </div>
-        <div style="flex: 1;">
-            
-        </div>
-    </div>
-
-    <div class="tech-note" style="margin-top: 20px;">
-        <strong>The Loop:</strong> Unlike a standard computer program that runs once and stops, Arduino code runs a <code>setup()</code> once, then runs a <code>loop()</code> thousands of times a second forever.
-    </div>
-</section>
-
-<section>
-    <h2 style="color: var(--accent-color);">The Heavy Lifting</h2>
-    <p>What’s actually happening under the hood?</p>
-    
-    <div style="padding: 40px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; margin-top: 30px;">
-        <p style="font-size: 1.2em; line-height: 1.6; text-align: left;">
-            Under the hood, the microcontroller has to manually flip a tiny switch on and off at an incredible speed to <strong>"hand-crank"</strong> a unique electrical message for every single light. 
-        </p>
-        <p style="font-size: 1.2em; line-height: 1.6; text-align: left; margin-top: 20px;">
-            It’s a nanosecond-perfect dance of pulses that has to happen millions of times a second just to change a color.
-        </p>
-    </div>
-
-    <div style="margin-top: 40px; color: var(--accent-color); font-weight: bold; font-size: 1.5em;">
-        ↓
-    </div>
-    
-    <p><strong>But we get to use libraries to make it easier.</strong></p>
-</section>
-
-            <section>
-                <h3>Libraries</h3>
-                <div style="display: flex; justify-content: center; gap: 20px;">
-                    <img src="fastled-3-9-2-beta-release-2-for-4-0-0-prelease-of-ws2812-v0-nio2vf9mp6yd1.webp" height="200">
-                    <img src="Screenshot 2026-01-17 154326.png" height="200">
-                </div>
-                <p>We use libraries to handle the 800kHz timing requirements of the WS2812B protocol, allowing us to focus on generative logic.</p>
-            </section>
-<section>
-    <h2 style="color: var(--accent-color);">Installing the Toolkits</h2>
-    <p>We will use two core libraries for the ESP32-C3.</p>
-    
-    <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 30px;">
-        <div style="flex: 1.2; text-align: left; font-size: 0.75em;">
-            <h4 style="color: #fff;">The Process</h4>
-            <ol>
-                <li>Open Arduino IDE.</li>
-                <li>Go to <strong>Sketch > Include Library > Manage Libraries...</strong></li>
-                <li>Search and <strong>Install</strong> the following:</li>
-            </ol>
-            
-            <ul style="margin-top: 20px; list-style-type: none; padding-left: 0;">
-                <li style="margin-bottom: 20px;">
-                    <strong style="color: var(--accent-color);">1. FastLED</strong><br>
-                    <span style="opacity: 0.8;">The industry standard for creative coding, color math, and easy animations.</span>
-                </li>
-                <li>
-                    <strong style="color: var(--accent-color);">2. NeoPixelBus</strong><br>
-                    <span style="opacity: 0.8;">The "Pro" choice for ESP32. It uses internal hardware (RMT) to ensure the lights never flicker.</span>
-                </li>
-            </ul>
-        </div>
-        
-        <div style="flex: 0.8; text-align: center;">
-             <div class="tech-note" style="margin-top: 20px; font-size: 0.65em;">
-                <strong>Why only these?</strong> The ESP32-C3 requires very specific timing that these two libraries handle best through hardware-level control.
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h3>NeoPixelBus</h3>
-    <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-        <div style="flex: 1.2; text-align: left; font-size: 0.65em;">
-            <pre><code class="language-cpp" data-trim>
-#include <NeoPixelBus.h>
-
-const uint16_t PixelCount = 64; 
-const uint8_t PixelPin = 4; 
-
-// three element pixels, in different order and speeds
-NeoPixelBus<NeoGrbFeature, NeoWs2812xMethod> strip(PixelCount, PixelPin);
-//NeoPixelBus<NeoRgbFeature, Neo400KbpsMethod> strip(PixelCount, PixelPin);
-
-void setup() {
-    strip.Begin();
-    strip.Show(); 
-}
-
-void loop() {
-    SINGLE PIXEL
-    RgbColor me(255, 127, 0);
-    strip.SetPixelColor(5, me);
-    strip.Show();
-    delay(500);
-
-    // int r = random(0, 255);
-    // int g = random(0, 255);
-    // int b = random(0, 255);
-    
-    // for(int i = 0; i < PixelCount; i++) {
-    //   r = random(0, 255);
-    //   g = random(0, 255);
-    //   b = random(0, 255);
-    //     RgbColor rand(r, g, b);
-    //     strip.SetPixelColor(i, rand);
-    // }
-    // strip.Show();
-    // delay(500);
-}
-            </code></pre>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h3>FastLED: Creative Control</h3>
-    <p>Fast and flexible. Best for generative art and color fades.</p>
-    <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 20px;">
-        <div style="flex: 1.2; text-align: left; font-size: 0.65em;">
-            <pre><code class="language-cpp" data-trim>
-#include <FastLED.h>
-
-#define NUM_LEDS 64
-#define DATA_PIN 4 
-CRGB leds[NUM_LEDS];
-
-void setup() {
-  FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
-  FastLED.setBrightness(40); 
-}
-
-void loop() {
-  // SINGLE PIXEL
-  leds[0] = CRGB::Red;
-  FastLED.show();
-  delay(500);
-
-
-  // for(int i = 0; i < NUM_LEDS; i++) {
-  //   leds[i] = CRGB::Blue;
-  // }
-  // FastLED.show();
-  // delay(500);
-
-}
-            </code></pre>
-        </div>
-    </div>
-</section>
-
-            <section data-background-color="#000">
-                <h3>Local Case Study: <em>Lucy in the Sky</em></h3>
-                <p style="font-size: 0.8em;">Erwin Redl | Union Square Subway Station</p>
-                <div class="placeholder-img" style="height: 250px;"><img src="T2014.6_Overview_1.jpg">  </div>
-                <ul style="font-size: 0.7em; margin-top: 10px;">
-                    <li><strong>Scale:</strong> Hundreds of custom edge-lit lasercut light panels.</li>
-                    <li><strong>Protocol:</strong> Uses DMX to orchestrate a massive orchestraed light show</li>
-                    <li><strong>Concept:</strong> Looking and thinking about a large scale lighting installation the public sphere</li>
-                </ul>
-            </section>
-
-<section data-background-color="#000d1a">
-                <h2 style="color: var(--accent-color);">Module 3: The Expanded Field</h2>
-                <p>From Local Binaries to Networked Systems</p>
-                <div class="tech-note">
-                    Moving beyond a single microcontroller to distributed systems that talk over the wire.
-                </div>
-            </section>
-
-
-
             <section>
                 <h3>WLED: The Swiss Army Knife</h3>
                 <div style="display: flex; gap: 20px; align-items: center;">
@@ -573,33 +365,27 @@ void loop() {
                 </div>
             </section>
 
-            <section>
 
-    <div style="text-align: left; max-width: 900px; margin: 0 auto;">
-        <h2 style="color: var(--accent-color);">WLED: Install</h2>
-        
-        <div style="display: flex; gap: 40px; margin-top: 25px;">
-            <div style="flex: 1;">
-                <h4 style="color: #fff; margin-bottom: 10px;">The Method:</h4>
-                <ol style="font-size: 0.8em; line-height: 1.8;">
-                    <li>Connect via USB (Hold <strong>BOOT</strong> button).</li>
-                    <li>Visit: <span style="color: var(--accent-color);">install.wled.me</span></li>
-                    <li>Select <strong>"Install WLED"</strong> (v0.14 or higher for C3).</li>
-                </ol>
-            </div>
-            
-            <div style="flex: 1;">
-                <h4 style="color: #fff; margin-bottom: 10px;">Why we use it:</h4>
-                <ul style="font-size: 0.8em; line-height: 1.8; list-style-type: '✦ ';">
-                    <li><strong>No Code Required:</strong> Installs via Chrome/Edge.</li>
-                    <li><strong>Built-in Art-Net/DMX:</strong> Ready to receive data from TouchDesigner immediately.</li>
-                    <li><strong>Mobile App:</strong> Change patterns from your phone.</li>
+            <section data-background-color="#000">
+                <h3>Local Case Study: <em>Lucy in the Sky</em></h3>
+                <p style="font-size: 0.8em;">Erwin Redl | Union Square Subway Station</p>
+                <div class="placeholder-img" style="height: 250px;"><img src="T2014.6_Overview_1.jpg">  </div>
+                <ul style="font-size: 0.7em; margin-top: 10px;">
+                    <li><strong>Scale:</strong> Hundreds of custom edge-lit lasercut light panels.</li>
+                    <li><strong>Protocol:</strong> Uses DMX to orchestrate a massive orchestraed light show</li>
+                    <li><strong>Concept:</strong> Looking and thinking about a large scale lighting installation the public sphere</li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<section>
+            </section>
+
+<section data-background-color="#000d1a">
+                <h2 style="color: var(--accent-color);">Module 3: Networked control</h2>
+                <p>From Local Binaries to Networked Systems</p>
+                ...
+            </section>
+
+            <section>
+    <h2 style="color: var(--accent-color);">The DMX Protocol</h2>
+    
     <h2 style="color: var(--accent-color);">The DMX Protocol</h2>
     <p>Direct technical breakdown of the signal hierarchy.</p>
     
@@ -650,24 +436,6 @@ void loop() {
                     </div>
                 </div>
             </section>
-
-            <section>
-                <h3>QLC+ Demo: Open Source Lighting Console</h3>
-                <div style="display: flex; gap: 20px; align-items: center;">
-                    <div style="flex: 1; text-align: left; font-size: 0.75em;">
-                        <p>Professional-grade lighting control software that’s completely free.</p>
-                        <ul>
-                            <li><strong>Virtual Console:</strong> Create faders and buttons to trigger your 8x8 patterns.</li>
-                            <li><strong>Function Manager:</strong> Build "scenes" and "chases" just like a stage lighting pro.</li>
-                            <li><strong>Assignment:</strong> Routing specific software channels to our physical ESP32 IP addresses.</li>
-                        </ul>
-                    </div>
-                    <div style="flex: 1;">
-                        <div class="placeholder-img" style="height: 250px;"> <img src="maxresdefault.jpg"> </div>
-                    </div>
-                </div>
-            </section>
-
 
 
                         <section>
